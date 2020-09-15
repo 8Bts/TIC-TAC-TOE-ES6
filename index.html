@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="page flex-center p-5">
+        <div id="indicator" class="_indicator"></div>
         <div class="game-grid">
             <button class="game-cell"></button>
             <button class="game-cell"></button>
@@ -24,7 +25,7 @@
             <button class="game-cell"></button>
         </div>
     </div>
-    <div class="modal" tabindex="-1" id="modalNewGame">
+    <div class="modal" tabindex="-1" id="modalNewGame" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -49,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="modal" tabindex="-1" id="modalGameOver">
+    <div class="modal" tabindex="-1" id="modalGameOver" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
         

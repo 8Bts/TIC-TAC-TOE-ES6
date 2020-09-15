@@ -9,6 +9,7 @@ const GameLogic = (() => {
 
     let player1 = Player('NaN', 'X');
     let player2 = Player('NaN', 'O');
+    let indicator =document.getElementById('indicator');
     
 
     document.getElementById('submitPlayers').onclick = () => {
@@ -17,12 +18,14 @@ const GameLogic = (() => {
 
       player1.name = p1Name;
       player2.name = p2Name;
-
+      indicator.innerText = player1.name + "'s turn";
       $('#modalNewGame').modal('hide');
     };
     document.getElementById('newGame').onclick = () => {
       window.location.reload();
     };
+
+    
     
     let player = player1;
     buttons.forEach((elem, idx) => {
@@ -43,6 +46,7 @@ const GameLogic = (() => {
         }
         console.log(`${player.name} ${player.turns.toString()}`);
         player = (player === player1) ? player2 : player1;
+        indicator.innerText = player.name + "'s turn";
       };
     });
     

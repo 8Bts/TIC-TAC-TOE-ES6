@@ -36,3 +36,12 @@
   text-align: center;
 }
 
+._indicator {
+  position: absolute;
+  top: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--info);
+}
+
