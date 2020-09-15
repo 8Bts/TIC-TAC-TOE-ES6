@@ -11,7 +11,7 @@
     <title>Play Tic Tac Toe</title>
 </head>
 <body>
-    <div class="page flex-center m-5">
+    <div class="page flex-center p-5">
         <div class="game-grid">
             <button class="game-cell"></button>
             <button class="game-cell"></button>
@@ -24,6 +24,43 @@
             <button class="game-cell"></button>
         </div>
     </div>
+    <div class="modal" tabindex="-1" id="modalNewGame">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center">Welcome to Tic Tac Toe game</h5>
+          </div>
+          <div class="modal-body text-center">
+            <p class="text-success">Please enter your names click Start</p>
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Player 1" id="player1">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Player 2" id="player2">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success btn-block" id="submitPlayers">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modalGameOver">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <div class="modal-body modal-body-end">
+            <p id="modalText" class="modal-text"></p>
+            <button id="newGame" class="new-game btn btn-success btn-block">Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="assets/index.js"></script>
 </body>
 </html>

@@ -5,10 +5,25 @@ import Player from './player.js';
 const GameLogic = (() => {
   const init = () => {
     const buttons = Array.from(document.getElementsByClassName('game-cell'));
+    $('#modalNewGame').modal({backdrop: 'static'});
 
+    let player1 = Player('NaN', 'X');
+    let player2 = Player('NaN', 'O');
+    
 
-    const player1 = Player('Rashid', 'X');
-    const player2 = Player('Rose', 'O');
+    document.getElementById('submitPlayers').onclick = () => {
+      let p1Name = document.getElementById('player1').value;
+      let p2Name = document.getElementById('player2').value;
+
+      player1.name = p1Name;
+      player2.name = p2Name;
+
+      $('#modalNewGame').modal('hide');
+    };
+    document.getElementById('newGame').onclick = () => {
+      window.location.reload();
+    };
+    
     let player = player1;
     buttons.forEach((elem, idx) => {
       elem.id = idx;
@@ -17,12 +32,14 @@ const GameLogic = (() => {
         GameBoard.renderContents();
         player.turns.push(idx + 1);
         if (player.isWinner()) {
-          alert(`${player.name} has won the game!`);
+          document.getElementById('modalText').innerText = player.name + ' has won the game!';
+          $('#modalGameOver').modal({backdrop: 'static'});
         }
         console.log(`${player.name} ${player.turns.toString()}`);
         player = (player === player1) ? player2 : player1;
       };
     });
+    
   };
 
   return { init };
