@@ -1,5 +1,4 @@
 const GameBoard = (() => {
-
   const cells = ['', '', '', '', '', '', '', '', ''];
 
   const mark = (cellIdx, sign) => {
@@ -7,8 +6,8 @@ const GameBoard = (() => {
   };
 
   const renderContents = () => {
-    cells.forEach((value, idx) => {
-      document.getElementById(idx+1).innerText = value;
+    Array.from(document.getElementsByClassName('game-cell')).forEach((element, idx) => {
+      element.innerText = cells[idx];
     });
   };
 

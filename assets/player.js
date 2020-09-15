@@ -10,7 +10,9 @@ const Player = (name, sign) => {
   const isWinner = () => winCases.some(winCase => winCase.every(elem => turns.includes(elem)));
 
 
-  return { name, sign, turns, isWinner };
+  return {
+    name, sign, turns, isWinner,
+  };
 };
 
 export default Player;
