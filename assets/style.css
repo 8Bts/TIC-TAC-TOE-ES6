@@ -1,1 +1,27 @@
 * { box-sizing: border-box; }
+
+
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 170px);
+    grid-template-rows: repeat(3, 170px);
+    grid-gap: 0.5em;
+    background-color: blue;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-cell {
+  background-color: white;
+  border: none;
+  font-size: 3rem;
+}
+
+.game-cell:focus {
+  outline: none;
+}
