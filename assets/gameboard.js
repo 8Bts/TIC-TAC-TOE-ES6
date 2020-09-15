@@ -16,7 +16,14 @@ const GameBoard = (() => {
     });
   };
 
-  return { mark, renderContents };
+  const isFull = () => {
+    if(cells.every(cell => cell != '')){
+      return true;
+    }
+    else false;
+  }
+
+  return { mark, renderContents, isFull };
 })();
 
 export default GameBoard;

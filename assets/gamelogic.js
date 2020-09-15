@@ -34,6 +34,12 @@ const GameLogic = (() => {
         if (player.isWinner()) {
           document.getElementById('modalText').innerText = player.name + ' has won the game!';
           $('#modalGameOver').modal({backdrop: 'static'});
+          return 1;
+        }
+        if (GameBoard.isFull()){
+          document.getElementById('modalText').innerText = 'The game is tie...';
+          $('#modalGameOver').modal({backdrop: 'static'});
+          return 1;
         }
         console.log(`${player.name} ${player.turns.toString()}`);
         player = (player === player1) ? player2 : player1;
