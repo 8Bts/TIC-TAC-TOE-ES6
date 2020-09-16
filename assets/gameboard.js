@@ -17,10 +17,10 @@ const GameBoard = (() => {
   };
 
   const isFull = () => {
-    if (cells.every(cell => cell != '')) {
+    if (cells.every(cell => cell !== '')) {
       return true;
     }
-    false;
+    return false;
   };
 
   return { mark, renderContents, isFull };

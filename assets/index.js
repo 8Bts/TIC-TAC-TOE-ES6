@@ -1,4 +1,5 @@
-// eslint-disable-next-line import/no-named-as-default-member
+/* eslint-disable import/extensions */
+
 import GameLogic from './gamelogic.js';
 
 
