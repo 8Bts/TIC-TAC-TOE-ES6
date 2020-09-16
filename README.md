@@ -26,7 +26,7 @@ Simple two players tic tac toe game built for playing on web browsers. Click the
 
   2. run `npm install`.
 
-  3. Open index.html on using your browser.
+  3. Open index.html with your browser.
 
 ## Author
 
