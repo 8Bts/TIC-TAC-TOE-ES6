@@ -1,4 +1,4 @@
-# Library Application
+# Tic Tac Toe
 
 Simple two players tic tac toe game built for playing on web browsers. Click the cells of the gameboard to mark it and try to complete a full row to win the game.  The score is considered tie when there is no completed row at the end. 
 
@@ -17,6 +17,16 @@ Simple two players tic tac toe game built for playing on web browsers. Click the
 ## Live Demo
 
 <a href="https://rawcdn.githack.com/8Bts/TIC-TAC-TOE-ES6/29278894f8de212b5bb55ef0b3e5310f559dc25f/index.html" target="_blank">Live version</a>
+
+## Getting Started
+
+  If you want to try this application locally, follow the steps below:
+
+  1. Clone the project using `git clone https://github.com/8Bts/TIC-TAC-TOE-ES6` command.
+
+  2. run `npm install`.
+
+  3. Open index.html on using your browser.
 
 ## Author
 

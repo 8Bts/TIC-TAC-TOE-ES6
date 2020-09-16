@@ -33,19 +33,20 @@
           </div>
           <div class="modal-body text-center">
             <p class="text-success">Please enter your names click Start</p>
+            <ul id='flash' class="_flash" ></ul>
             <form>
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Player 1" id="player1">
+                  <input type="text" class="form-control" placeholder="Player 1" id="player1" required>
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Player 2" id="player2">
+                  <input type="text" class="form-control" placeholder="Player 2" id="player2" required>
                 </div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success btn-block" id="submitPlayers">Start</button>
+            <button type="submit" class="btn btn-success btn-block" id="submitPlayers">Start</button>
           </div>
         </div>
       </div>

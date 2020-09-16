@@ -44,3 +44,7 @@
   font-family: 'Courier New', Courier, monospace;
   color: var(--info);
 }
+
+._flash {
+  color: var(--danger);
+}

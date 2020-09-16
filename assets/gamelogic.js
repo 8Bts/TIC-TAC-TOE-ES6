@@ -17,10 +17,19 @@ const GameLogic = (() => {
       const p1Name = document.getElementById('player1').value;
       const p2Name = document.getElementById('player2').value;
 
+      if (p1Name === '' || p2Name === '') {
+        document.getElementById('flash').innerHTML = '<li>Please fill the name fields to start the game</li>';
+        return 0;
+      } if (p1Name === p2Name) {
+        document.getElementById('flash').innerHTML = '<li>Please don\'t use same player names</li>';
+        return 0;
+      }
+
       player1.name = p1Name;
       player2.name = p2Name;
       indicator.innerText = `${player1.name}'s turn`;
       $('#modalNewGame').modal('hide');
+      return 1;
     };
     document.getElementById('newGame').onclick = () => {
       window.location.reload();
