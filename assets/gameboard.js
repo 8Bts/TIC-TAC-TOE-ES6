@@ -8,20 +8,20 @@ const GameBoard = (() => {
   const renderContents = () => {
     Array.from(document.getElementsByClassName('game-cell')).forEach((element, idx) => {
       element.innerText = cells[idx];
-      if(cells[idx] === 'X'){
+      if (cells[idx] === 'X') {
         element.style.color = 'blue';
-      }else {
+      } else {
         element.style.color = 'red';
       }
     });
   };
 
   const isFull = () => {
-    if(cells.every(cell => cell != '')){
+    if (cells.every(cell => cell != '')) {
       return true;
     }
-    else false;
-  }
+    false;
+  };
 
   return { mark, renderContents, isFull };
 })();
