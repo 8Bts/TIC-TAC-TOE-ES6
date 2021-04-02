@@ -3,7 +3,7 @@
 Simple two players tic tac toe game built for playing on web browsers. Click the cells of the gameboard to mark it and try to complete a full row to win the game.  The score is considered tie when there is no completed row at the end. 
 
 ## Application Screenshot
-![screenshot](assets/images/screenshot.png)
+![screenshot](src/assets/images/screenshot.png)
 
 ## Built With
 
@@ -16,7 +16,7 @@ Simple two players tic tac toe game built for playing on web browsers. Click the
 
 ## Live Demo
 
-<a href="https://rawcdn.githack.com/8Bts/TIC-TAC-TOE-ES6/29278894f8de212b5bb55ef0b3e5310f559dc25f/index.html" target="_blank">Live version</a>
+<a href="https://rawcdn.githack.com/8Bts/TIC-TAC-TOE-ES6/253c91acd58c644b44b4fdea97b16ff7fff4674c/dist/index.html" target="_blank">Live version</a>
 
 ## Getting Started
 
