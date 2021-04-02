@@ -8,11 +8,18 @@ const GameBoard = (() => {
   const renderContents = () => {
     Array.from(document.getElementsByClassName('game-cell')).forEach((element, idx) => {
       element.innerText = cells[idx];
+      element.setAttribute('id', `cell#${idx}`);
       if (cells[idx] === 'X') {
         element.style.color = 'blue';
       } else {
         element.style.color = 'red';
       }
+    });
+  };
+
+  const markWonCase = wonCase => {
+    wonCase.forEach(idx => {
+      document.getElementById(`cell#${idx}`).style.backgroundColor = 'red';
     });
   };
 
@@ -23,7 +30,9 @@ const GameBoard = (() => {
     return false;
   };
 
-  return { mark, renderContents, isFull };
+  return {
+    mark, renderContents, isFull, markWonCase,
+  };
 })();
 
 export default GameBoard;

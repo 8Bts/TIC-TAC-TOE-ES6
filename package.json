@@ -4,7 +4,9 @@
   "description": "This project is about building a web application using JavaScript features (Objects, Object Constructors etc). We proactively used DOM manipulation to build the most of the part of application. You can add and delete books in this application using the buttons. You can also toggle the read status of the book.",
   "main": "index.js",
   "scripts": {
-    "test": "/testjs"
+    "test": "/testjs",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,22 @@
   },
   "homepage": "https://github.com/8Bts/TIC-TAC-TOE-ES6#readme",
   "devDependencies": {
+    "css-loader": "^5.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.2.0",
+    "style-loader": "^2.0.0",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-csstree-validator": "^1.8.0",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-scss": "^3.17.2",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
   }
 }
