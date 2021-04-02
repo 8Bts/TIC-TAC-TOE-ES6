@@ -5,6 +5,7 @@ import $ from 'jquery';
 import './styles/style.css';
 import Player from './player';
 import GameBoard from './gameboard';
+import _beep from './audio/beep.mp3';
 
 const buttons = Array.from(document.getElementsByClassName('game-cell'));
 $('#modalNewGame').modal({ backdrop: 'static' });
@@ -38,7 +39,7 @@ document.getElementById('newGame').onclick = () => {
 
 
 let player = player1;
-const beep = new Audio('../assets/beep.mp3');
+const beep = new Audio(_beep);
 buttons.forEach((elem, idx) => {
   elem.id = idx;
   elem.onclick = () => {
