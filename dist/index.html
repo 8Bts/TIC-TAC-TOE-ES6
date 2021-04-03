@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tic Tac Toe</title>
+</head>
+<body>
+    <div class="page flex-center p-5">
+        <div id="indicator" class="_indicator"></div>
+        <div class="game-grid">
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+            <button class="game-cell"></button>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modalNewGame" data-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center">Welcome to Tic Tac Toe game</h5>
+          </div>
+          <div class="modal-body text-center">
+            <p class="text-success">Please enter your names click Start</p>
+            <ul id='flash' class="_flash" ></ul>
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Player 1" id="player1" required>
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Player 2" id="player2" required>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success btn-block" id="submitPlayers">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modalGameOver" data-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <div class="modal-body modal-body-end">
+            <p id="modalText" class="modal-text"></p>
+            <button id="newGame" class="new-game btn btn-success btn-block">Replay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
