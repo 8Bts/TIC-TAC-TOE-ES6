@@ -28,6 +28,10 @@ Simple two players tic tac toe game built for playing on web browsers. Click the
 
   3. Open index.html on using your browser.
 
+  If you want to run tests:
+
+  - run `npm run test`
+
 ## Author
 
 👤 **Rashid Mammadli**

@@ -2,7 +2,7 @@ const GameBoard = (() => {
   const cells = ['', '', '', '', '', '', '', '', ''];
 
   const mark = (cellIdx, sign) => {
-    cells[cellIdx] = sign;
+    if (typeof cellIdx === 'number' && cellIdx >= 0 && cellIdx < 9)cells[cellIdx] = sign;
   };
 
   const renderContents = () => {
